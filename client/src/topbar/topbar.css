@@ -1,0 +1,49 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.top-left-div, .top-right-div {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+
+.top-center-div {
+    flex: 6;
+    text-align: center;
+}
+
+.top-center-div>ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.top-center-div>ul>li {
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.top-right-div>img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.top-right-div>i {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+i {
+    width: 40px;
+}
+

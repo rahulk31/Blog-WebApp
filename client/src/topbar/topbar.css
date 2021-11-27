@@ -27,6 +27,7 @@
 .top-center-div>ul>li {
     text-transform: uppercase;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .top-right-div>img {
@@ -34,6 +35,7 @@
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .top-right-div>i {
@@ -45,5 +47,6 @@
 
 i {
     width: 40px;
+    cursor: pointer;
 }
 

@@ -22,10 +22,10 @@ function Sidebar() {
             <div className="sidebar-item">
                 <span className="sidebar-title">FOLLOW US</span>
                 <div className="sidebar-social">
-                <i class="sidebar-icon fab fa-facebook"></i>
-                <i class="sidebar-icon fab fa-twitter"></i>
-                <i class="sidebar-icon fab fa-instagram"></i>
-                <i class="sidebar-icon fab fa-pinterest"></i>
+                <i className="sidebar-icon fab fa-facebook"></i>
+                <i className="sidebar-icon fab fa-twitter"></i>
+                <i className="sidebar-icon fab fa-instagram"></i>
+                <i className="sidebar-icon fab fa-pinterest"></i>
                 </div>
             </div>
         </div>

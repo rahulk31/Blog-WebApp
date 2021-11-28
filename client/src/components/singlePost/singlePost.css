@@ -1,0 +1,60 @@
+.single-post {
+    flex: 9;
+    margin: 1rem auto;
+}
+
+.single-post-wrapper {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.single-post-img {
+    max-width: 900px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.single-post-title {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 2rem auto 1rem auto;
+}
+
+.single-post-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.single-post-author-name, .single-post-time {
+    margin: 0 1rem;
+}
+
+.single-post-time {
+    color: #999;
+}
+
+.icons-wrapper {
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #000;
+}
+
+.edit-icon {
+    color: green;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: orange;
+    cursor: pointer;
+}
+
+.single-post-desc {
+    font-family: 'Varela', sans-serif;
+    padding: 1rem;
+    text-align: justify;
+}

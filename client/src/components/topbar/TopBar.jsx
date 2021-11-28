@@ -5,10 +5,10 @@ function TopBar() {
     return (
         <div className="top">
             <div className="top-left-div">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest"></i>
+            <i className="fab fa-facebook"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-instagram"></i>
+            <i className="fab fa-pinterest"></i>
             </div>
             <div className="top-center-div">
                 <ul>
@@ -20,7 +20,7 @@ function TopBar() {
                 </ul>
             </div>
             <div className="top-right-div">
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
                 <img src="/assets/profile.jpg" alt="profile" />
             </div>
         </div>

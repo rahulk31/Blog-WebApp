@@ -2,7 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(1, 1, 1, 0.762);
+    z-index: 900;
+    color: #fff !important;
+    
 }
 
 .top-left-div, .top-right-div {
@@ -26,8 +32,10 @@
 
 .top-center-div>ul>li {
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 0 1rem;
     cursor: pointer;
+    font-weight: 300;
+    /* color: #be9656 !important; */
 }
 
 .top-right-div>img {
@@ -36,6 +44,9 @@
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
+    display: block;
+    text-align: center;
+    margin-top: auto;
 }
 
 .top-right-div>i {
@@ -48,5 +59,6 @@
 i {
     width: 40px;
     cursor: pointer;
+    color: #fff;
 }
 

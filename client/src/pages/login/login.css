@@ -1,5 +1,5 @@
 .login {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 65px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,12 +46,12 @@
     color: white;
 }
 
-.login-btn {
+.login-login-btn {
     font-size: 1.2rem;
     background-color: coral;
 }
 
-.register-btn {
+.login-register-btn {
     position: absolute;
     top: 70px;
     right: 30px;

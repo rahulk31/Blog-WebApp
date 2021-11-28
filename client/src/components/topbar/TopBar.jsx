@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './topbar.css';
 
 function TopBar() {
+    const user = false;
     return (
         <div className="top">
             <div className="top-left-div">
@@ -11,17 +13,22 @@ function TopBar() {
             <i className="fab fa-pinterest"></i>
             </div>
             <div className="top-center-div">
-                <ul>
-                    <li>HOME</li>
-                    <li>about</li>
-                    <li>contact</li>
-                    <li>Write</li>
-                    <li>LOGOUT</li>
+                <ul className="topbar-ul">
+                    <li className="topbar-ul-li"><Link className="link" to="/">HOME</Link></li>
+                    <li className="topbar-ul-li"><Link className="link" to="/settings">ABOUT</Link></li>
+                    <li className="topbar-ul-li"><Link className="link" to="/settings">CONTACT</Link></li>
+                    <li className="topbar-ul-li"><Link className="link" to="/write">WRITE</Link></li>
+                    <li className="topbar-ul-li">{user && "LOGOUT"}</li>
                 </ul>
             </div>
             <div className="top-right-div">
                 <i className="fas fa-search"></i>
-                <img src="/assets/profile.jpg" alt="profile" />
+                { user ? <img src="/assets/profile.jpg" alt="profile" />
+                : <ul className="topbar-ul">
+                    <li className="topbar-ul-li"><Link className="link" to="/login">LOGIN</Link></li>
+                    <li className="topbar-ul-li"><Link className="link" to="/register">REGISTER</Link></li>
+                    </ul>}
+                
             </div>
         </div>
     )

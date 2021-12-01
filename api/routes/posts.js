@@ -29,7 +29,7 @@ router.put('/:id', async (req, res) => {
         res.status(500).json(err);
       }
     } else {
-        res.status(404).json('You are not allowed')
+      res.status(404).json('You are not allowed');
     }
   } catch (err) {
     res.status(500).json(err);
@@ -38,22 +38,22 @@ router.put('/:id', async (req, res) => {
 
 // DELETE POST
 router.delete('/:id', async (req, res) => {
-    try {
-      const post = await Post.findById(req.params.id);
-      if (post.username === req.body.username) {
-        try {
-          await post.delete();
-          res.status(200).json('Post has been deleted');
-        } catch (err) {
-          res.status(500).json(err);
-        }
-      } else {
-          res.status(404).json('You are not allowed')
+  try {
+    const post = await Post.findById(req.params.id);
+    if (post.username === req.body.username) {
+      try {
+        await post.delete();
+        res.status(200).json('Post has been deleted');
+      } catch (err) {
+        res.status(500).json(err);
       }
-    } catch (err) {
-      res.status(500).json(err);
+    } else {
+      res.status(404).json('You are not allowed');
     }
-  });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // GET POST
 router.get('/:id', async (req, res) => {
@@ -66,15 +66,27 @@ router.get('/:id', async (req, res) => {
 });
 
 // GET ALL POSTS
-// router.get('/', async (req, res) => {
-//     try {
-//       const post = await Post.findById(req.params.id);
-//       res.status(200).json(post);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+router.get('/', async (req, res) => {
+  const username = req.query.user;
+  const catName = req.query.cat;
+  try {
+    let posts;
 
-  
+    if (username) {
+      posts = await Post.find({ username });
+    } else if (catName) {
+      posts = await Post.find({
+        categories: {
+          $in: [catName],
+        },
+      });
+    } else {
+      posts = await Post.find();
+    }
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

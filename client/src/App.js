@@ -5,7 +5,7 @@ import Settings from './pages/settings/Settings';
 import Home from './pages/home/Home';
 import Single from './pages/single/Single';
 import Write from './pages/write/Write';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const user = true;
